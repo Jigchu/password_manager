@@ -35,6 +35,8 @@ def decrypt_data():
 
 def retrive_data():
 	byte_data: bytes = decrypt_data()
+	if byte_data == b"":
+		return None
 	data: str = byte_data.decode(encoding="utf-8")
 	data = data.strip()
 	passwords = {}
